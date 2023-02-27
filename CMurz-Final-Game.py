@@ -356,9 +356,9 @@ while roomcounter < 4:
             try:
                 battlechoice = input()
             except:
-                continue
+                continue   # Could have some text here that says, "That is not an option." Or something like that.
             battlechoice = battlechoice.lower()
-            if battlechoice == "a":
+            if battlechoice == "a":  # This is like the smallest, tiniest, optional thing ever you could do, but if the user puts a space before a, c, or d, you could write some code that removes the spaces so it will stil laccept it.
                 enemyhealth = enemyhealth - attackroll
                 print("You do " + str(attackroll) + " damage!")
             if battlechoice == "c" and enemychoice == 1:
