@@ -157,7 +157,7 @@ chestindex = {
     "after" : "Vigor renewed, you stride onwards."
     },
     5 : {"desc" : "You find a massive chest with a golden trim.",
-    "prize" : "There's a smaller chest inside.",
+    "prize" : "There's a smaller chest inside.", # This printed 5 times for some reason; I'm not sure why
     "heal" : "-5",
     "after" : "You give up."
     },
@@ -355,7 +355,7 @@ while roomcounter < 4:
             print("What will you do? \n[A]ttack, [C]ounter, [D]odge")
             try:
                 battlechoice = input()
-            except:
+            except: # Not sure what this part is for
                 continue
             battlechoice = battlechoice.lower()
             if battlechoice == "a":
@@ -371,7 +371,7 @@ while roomcounter < 4:
                 print("But you miss-timed the counterattack!")
             if battlechoice == "d":
                 dodgecounter += random.randint(1,3)
-                print("You wait for an attack...")
+                print("You wait for an attack...") # Maybe put something in for the event that the user types something other than a, c, or d
             enemyturn = True
             playerturn = False
             time.sleep(3)
@@ -409,7 +409,7 @@ while roomcounter < 4:
             counterwin = 0
             counterfail = 0
             dodgecounter = dodgecounter - 1
-            if enemyhealth <= 0:
+            if enemyhealth <= 0: # This part should be under playerturn
                 if playerhealth >= 450:
                     print("You won, with nary a scratch on you!\n")
                 if playerhealth < 450 and playerhealth >= 200:
@@ -466,7 +466,7 @@ while roomcounter < 4:
         else:
             print("You decide to leave it alone.")
             time.sleep(3)
-    if roomstate == 1 or roomstate == 2:
+    if roomstate == 1 or roomstate == 2: # The way this is written, this never happens because one of the previous two "if" statements will have already applied.
         print("There's an old altar in the back of the room.")
         time.sleep(2)
         print("Rest?\n[Y] or [N]")
