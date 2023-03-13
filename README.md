@@ -1,5 +1,5 @@
 # Final-Game-Draft
-A draft version of a text-based dungeon-crawler game, made for CMSC140, and by Clarence Murzyn
+A text-based dungeon-crawler game, made for CMSC140, and by Clarence Murzyn
 
 This is PYTHON'S LAIR, a text-based, turn-based fantasy RPG written in Python.
 In this game, you must pay careful attention to the world around you to fight enemies,
@@ -20,3 +20,6 @@ Stay strong, and fight, Warrior!
 
 **As of the current version, difficulty has not been thourougly balanced.
 Struggle at your own discretion.
+
+Uses random, os, and time modules.
+Can be played through the terminal as is.
